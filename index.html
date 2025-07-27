@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester 7 Timetable</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #3498db, #8e44ad);
+            -webkit-background-clip: text;
+            color: transparent;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        table {
+            width: 90%;
+            max-width: 1000px;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        th {
+            background: linear-gradient(90deg, #34495e, #2c3e50);
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        td {
+            background: #ecf0f1;
+        }
+
+        td:hover {
+            background: #d5dbdb;
+            transform: scale(1.05);
+        }
+
+        .soa {
+            background: linear-gradient(135deg, #ADD8E6, #87CEEB);
+            color: #fff;
+        }
+
+        /* Blue */
+        .spm {
+            background: linear-gradient(135deg, #90EE90, #32CD32);
+            color: #fff;
+        }
+
+        /* Green */
+        .srr {
+            background: linear-gradient(135deg, #DDA0DD, #C71585);
+            color: #fff;
+        }
+
+        /* Purple */
+        .ctsd {
+            background: linear-gradient(135deg, #FFA500, #FF4500);
+            color: #fff;
+        }
+
+        /* Orange */
+        td:empty {
+            background: #bdc3c7;
+        }
+
+        #legend {
+            margin-top: 20px;
+            width: 90%;
+            max-width: 1000px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #legend h2 {
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        #legend ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #legend ul li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        #legend ul li span {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        /* Adjust size for smaller screens */
+        @media (max-width: 800px) {
+            table {
+                width: 85%;
+            }
+
+            th,
+            td {
+                padding: 12px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            table {
+                width: 80%;
+            }
+
+            th,
+            td {
+                padding: 10px;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            table {
+                width: 75%;
+            }
+
+            th,
+            td {
+                padding: 8px;
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Semester 7 Timetable</h1>
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
+        <tr>
+            <td>08:00–09:00</td>
+            <td></td>
+            <td><span class="srr">SRR (E9)</span></td>
+            <td></td>
+            <td><span class="srr">SRR (E9)</span></td>
+            <td><span class="spm">SPM (E6)</span></td>
+        </tr>
+        <tr>
+            <td>09:00–10:00</td>
+            <td><span class="soa">SOA (E7)</span></td>
+            <td><span class="soa">SOA (E7)</span></td>
+            <td></td>
+            <td><span class="soa">SOA (E7)</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10:00–11:00</td>
+            <td><span class="spm">SPM (E5, E6)</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>11:00–12:00</td>
+            <td><span class="spm">SPM (E5, E6)</span></td>
+            <td></td>
+            <td><span class="ctsd">CTSD (E1)</span></td>
+            <td></td>
+            <td><span class="srr">SRR (E9)</span></td>
+        </tr>
+        <tr>
+            <td>12:00–13:00</td>
+            <td><span class="ctsd">CTSD (E1)</span></td>
+            <td></td>
+            <td><span class="spm">SPM (E6, E5)</span></td>
+            <td></td>
+            <td><span class="spm">SPM (E5)</span></td>
+        </tr>
+        <tr>
+            <td>13:00–14:00</td>
+            <td></td>
+            <td></td>
+            <td><span class="spm">SPM (E6, E5)</span></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <div id="legend">
+        <h2>Subject Codes & Full Forms</h2>
+        <ul>
+            <li><span style="background: linear-gradient(135deg, #ADD8E6, #87CEEB);"></span> SOA - Service Oriented
+                Architecture (COCSE50)</li>
+            <li><span style="background: linear-gradient(135deg, #90EE90, #32CD32);"></span> SPM - Software Project
+                Management (COCSE51)</li>
+            <li><span style="background: linear-gradient(135deg, #DDA0DD, #C71585);"></span> SRR - Software Reuse and
+                Re-engineering (COCSE52)</li>
+            <li><span style="background: linear-gradient(135deg, #FFA500, #FF4500);"></span> CTSD - Current Trends in
+                Software Development (COCSE55)</li>
+        </ul>
+    </div>
+</body>
+
+</html>
